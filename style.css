@@ -1,9 +1,36 @@
 header {
     background-image: linear-gradient(to bottom right, #b0c2f2, #b0c2f2, #ff00bb);
     width: 100vw;
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    /*border-bottom: 2px solid #ff00bb;*/
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    border-bottom: 1px solid #ff00bb;
+}
+
+.me {
+    position: relative; 
+    margin: 3rem 0px 0px 0px; 
+    right: 0px; 
+    top: 0px; 
+    max-width: 300px; 
+    height: auto;
+}
+
+@media (max-width:768px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header-right {
+        max-width: 100vw!important;
+    }
+    .me {
+        width: 100%;
+        height: auto;
+        margin: 0px auto 24px auto;
+    }
 }
 
 .header-left {
