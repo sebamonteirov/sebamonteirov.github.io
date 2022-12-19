@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <script src="https://kit.fontawesome.com/df94babe18.js" crossorigin="anonymous"></script>    
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("https://www.w3schools.com/w3images/mac.jpg");
+      min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+    </style>
+  </head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#inicio" class="w3-bar-item w3-button w3-wide">S. MONTEIRO</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#inicio" class="w3-bar-item w3-button">INICIO</a>
+      <a href="#habilidades" class="w3-bar-item w3-button"> HABILIDADES</a>
+      <a href="#proyectos" class="w3-bar-item w3-button"> PROYECTOS</a>
+      <a href="#contacto" class="w3-bar-item w3-button"> CONTACTO</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#inicio" onclick="w3_close()" class="w3-bar-item w3-button">INICIO</a>
+  <a href="#habilidades" onclick="w3_close()" class="w3-bar-item w3-button">HABILIDADES</a>
+  <a href="#proyectos" onclick="w3_close()" class="w3-bar-item w3-button">PROYECTOS</a>
+  <a href="#contacto" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTO</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header id="inicio">
+  <div class="header-left" style="padding:48px">
+    <span class="hi">Hola, soy Sebastián Monteiro</span><br>
+    <span>
+      ¡Bienvenid@ a mi portafolio personal!<br>
+      Tengo 18 años y hace 4 comencé a programar. En ese tiempo he adquirido experiencia en diversas tecnologias que me han permitido crear proyectos para solucionar problematicas sociales. 
+    </span>
+  </div> 
+  <div class="header-right" style="padding:48px">
+    <img src="" alt="">
+  </div> 
+  <div>
+
+  </div>
+</header>
+
+<!-- HABILIDADES Section -->
+<div class="w3-container" style="padding:128px 16px" id="habilidades">
+  <h3 class="w3-center">HABILIDADES</h3>
+  <div class="container-skills">
+    <div class="container-skills-item">
+      <div class="webdev">
+        <i class="fa-brands fa-html5" style="grid-column: 2; grid-row: 1;"></i>
+        <i class="fa-brands fa-css3-alt" style="grid-column: 3; grid-row: 2;"></i>
+        <i class="fa-brands fa-js" style="grid-column: 2; grid-row: 3;"></i>
+        <i class="fa-brands fa-php" style="grid-column: 1; grid-row: 2;"></i>
+      </div>
+      <span>Desarrollo Web</span>
+    </div>
+
+    <div class="container-skills-item">
+      <div class="container-skills-item-simbol">
+        <i class="fa-brands fa-unity"></i>
+      </div>
+      <span>Unity</span>
+    </div>
+
+    <div class="container-skills-item">
+      <div class="container-skills-item-simbol">
+        <i class="fa-solid fa-robot"></i>      
+      </div>
+      <span>Arduino</span>
+    </div>
+
+    <div class="container-skills-item">
+      <div class="container-skills-item-simbol">
+        <i class="fa-solid fa-mobile-screen-button"></i>     
+      </div>
+      <span>Desarrollo móvil (React-Native y Kotlin)</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- Proyectos-->
+
+<div class="w3-container" style="padding: 0px 16px 128px 16px" id="proyectos">
+  <h3 class="w3-center">PROYECTOS</h3>
+  <div class="container">
+    <figure>
+      <img src="images/cuidemonos.jpg" alt="" />
+      <h2>Cuidémonos</h2>
+      <p>Cuidémonos es una aplicación al servicio de la salud pública. Su función principal consiste en mejorar la trazabilidad de casos covid-19 pero es extrapolable a cualquier enfermedad infecto-contagiosa, incluyendo ITS. </p>
+      <a class="btn--solid btngit" href="https://github.com/sebamonteirov/Cuidemonos" target="_blank"><i class="fa-brands fa-github"></i><span class="txt-btn">Revisa el proyecto en GitHub</span></a>
+    </figure>
+    <figure>
+      <img src="images/quantumhero.jpg" alt="" />
+      <h2>Quantum Hero</h2>
+      <p>¿A quién le gustan los videojuegos? A la gran mayoría de las personas. Lamentablemente cuando la pregunta se cambia por ¿A quién le gusta la ciencia? No suele obtener tantas respuestas positivas. Por eso nace Quantum Hero, un RPG que incentiva el interés por la ciencia y por la experimentación cientifica.</p>
+      <a class="btn--solid btngit" href="https://github.com/sebamonteirov/Cuidemonos" target="_blank"><i class="fa-brands fa-github"></i><span class="txt-btn">Revisa el proyecto en GitHub</span></a>
+    </figure>
+    <figure>
+      <img src="https://assets.codepen.io/12005/sunset.jpg" alt="" />
+      <h2>Ingkayefe Device</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates eius cupiditate sunt nostrum ea possimus exercitationem dolores? Nemo impedit veritatis similique laborum corporis nam, mollitia est rem non animi.</p>
+      <a class="btn--solid btngit" href="https://github.com/sebamonteirov/Cuidemonos" target="_blank"><i class="fa-brands fa-github"></i><span class="txt-btn">Revisa el proyecto en GitHub</span></a>
+    </figure>
+    <figure>
+      <img src="https://assets.codepen.io/12005/snowy.jpg" alt="" />
+      <h2>Ingkayefe APP</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates eius cupiditate sunt nostrum ea possimus exercitationem dolores? Nemo impedit veritatis similique laborum corporis nam, mollitia est rem non animi.</p>
+      <a class="btn--solid btngit" href="https://github.com/sebamonteirov/Cuidemonos" target="_blank"><i class="fa-brands fa-github"></i><span class="txt-btn">Revisa el proyecto en GitHub</span></a>
+    </figure>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contacto">
+  <h3 class="w3-center">CONTACTO</h3>
+  <div style="width: 80vw; margin: auto; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around;">
+    <div style="display: flex; flex-direction: column;">
+      <a class="btn--solid" href="mailto:sebastianmonteiro.trabajo@protonmail.com" target="_blank"><i class="fa-regular fa-envelope"></i>sebastianmonteiro.trabajo@protonmail.com</a>
+
+      <a class="btn--outline" href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i>+56936477017</a>
+
+      <h4>Sígueme en mis redes sociales</h4>
+      <div style="margin: auto; font-size: 2rem;">
+        <a href="https://www.instagram.com/monteiro_con_i/" style="margin: 1rem;"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/sebasti%C3%A1n-andr%C3%A9s-monteiro-villagr%C3%A1n-60707225b/" style="margin: 1rem;"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+    <!--<form style="display: flex; flex-direction: column;" action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>-->
+  </div>
+</div>
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#inicio" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.instagram.com/monteiro_con_i/" style="margin: 1rem;"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/sebasti%C3%A1n-andr%C3%A9s-monteiro-villagr%C3%A1n-60707225b/" style="margin: 1rem;"><i class="fa-brands fa-linkedin"></i></a>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
