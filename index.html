@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://kit.fontawesome.com/df94babe18.js" crossorigin="anonymous"></script>    
     <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
@@ -64,7 +65,16 @@
 <!-- Header with full-height image -->
 <header id="inicio">
   <div class="header-left" style="padding:48px">
-    <span class="hi">Hola, soy Sebastián Monteiro</span><br>
+
+    <!--<span class="hi">Hola, soy Sebastián Monteiro</span><br>-->
+
+    <h1 class="ml11">
+      <span class="text-wrapper">
+        <span class="line line1"></span>
+        <span class="letters">Hola, soy Sebastián Monteiro</span>
+      </span>
+    </h1>
+
     <span>
       ¡Bienvenid@ a mi portafolio personal!<br>
       Tengo 18 años y hace 4 comencé a programar. En ese tiempo he adquirido experiencia en diversas tecnologias que me han permitido crear proyectos para solucionar problematicas sociales. 
@@ -211,6 +221,42 @@ function w3_open() {
 function w3_close() {
     mySidebar.style.display = "none";
 }
+</script>
+
+<script>
+  //SCRIPT DE LETRAS DEL TITULO QUE SE MUEVEN
+  // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml11 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 10000
+  });
 </script>
 
 </body>
